@@ -15,7 +15,7 @@ import homework.com.candy.Candy;
  */
 
 public class NewYearPresentImp implements NewYearPresent {
-    ArrayList<Candy> candies;
+    private List<Candy> candies;
     
     public NewYearPresentImp() {
 	candies = new ArrayList<>();
@@ -26,7 +26,7 @@ public class NewYearPresentImp implements NewYearPresent {
      */
     @Override
     public List<Candy> getCandies() {
-	return candies;
+	return new ArrayList<>(candies);
     }
 
     /* (non-Javadoc)

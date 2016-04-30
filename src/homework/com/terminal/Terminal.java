@@ -2,6 +2,9 @@ package homework.com.terminal;
 
 import java.util.Scanner;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import homework.com.candy.*;
 import homework.com.init.Init;
 import homework.com.present.NewYearPresent;
@@ -21,12 +24,11 @@ public class Terminal {
      * @param args
      */
     public static void main(String[] args) {
-	/*ApplicationContext context = 
+	ApplicationContext context = 
 	             new ClassPathXmlApplicationContext("Beans.xml");
 	NewYearPresentImp present = (NewYearPresentImp) context.getBean("present");
-	NewYearPresent newYearPresent = present;*/
-	
-	NewYearPresent newYearPresent = Init.getInit().getPresent();
+	NewYearPresent newYearPresent = present;
+	//NewYearPresent newYearPresent = Init.getInit().getPresent();
 	int status = 0;
 	double from = 0, to = 0;
 	Scanner in = new Scanner(System.in);
