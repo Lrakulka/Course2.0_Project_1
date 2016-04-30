@@ -6,7 +6,7 @@ package homework.com.candy;
  * 
  * Candy implementation
  */
-class CandyImp implements Candy {
+abstract class CandyImp implements Candy {
     private double 	sugar;
     private int		weight;
     private String	name;
@@ -51,6 +51,13 @@ class CandyImp implements Candy {
     @Override
     public String toString() {
         return "Candy name " + name + " Candy weight " + 
-        	weight + " Candy sugar " + sugar;
+        	weight + " Candy sugar " + sugar + 
+        	" Candy price " + getPrice();
     }
+    
+    /**
+     * Return price of candy
+     * @return price
+     */
+    abstract int getPrice();
 }

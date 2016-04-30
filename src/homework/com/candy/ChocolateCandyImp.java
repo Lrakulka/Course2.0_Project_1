@@ -6,16 +6,11 @@ package homework.com.candy;
  * 
  * ChocolateCandy class
  */
-class ChocolateCandyImp implements Candy, Chocolate {
-    private double 	sugar;
-    private int		weight;
-    private String	name;
+abstract class ChocolateCandyImp extends CandyImp implements Chocolate {
     private short	perc;	// Chocolate percent
     
     ChocolateCandyImp(short perc, double sugar, int weight, String name) {
-	this.sugar = sugar;
-	this.weight = weight;
-	this.name = name;
+	super(sugar, weight, name);
 	this.perc = perc;
     }
     
@@ -25,39 +20,16 @@ class ChocolateCandyImp implements Candy, Chocolate {
     @Override
     public short getChocolate() {
 	return perc;
-    }
-
-    /* (non-Javadoc)
-     * @see homework.com.candy.Candy#getSugar()
-     */
-    @Override
-    public double getSugar() {
-	return sugar;
-    }
-
-    /* (non-Javadoc)
-     * @see homework.com.candy.Candy#getWeight()
-     */
-    @Override
-    public int getWeight() {
-	return weight;
-    }
-
-    /* (non-Javadoc)
-     * @see homework.com.candy.Candy#getName()
-     */
-    @Override
-    public String getName() {
-	return name;
-    }
+    } 
 
     /* (non-Javadoc)
      * @see java.lang.Object#toString()
      */
     @Override
     public String toString() {
-        return "Candy name " + name + " Candy weight " + 
-        	weight + " Candy sugar " + sugar + 
-        	" Candu percent of chocolote " + perc + "%";
+        return "Candy name " + getName() + " Candy weight " + 
+        	getWeight() + " Candy sugar " + getSugar() + 
+        	" Candu percent of chocolote " + getChocolate() + 
+        	"% Candy price " + getPrice();
     }
 }
