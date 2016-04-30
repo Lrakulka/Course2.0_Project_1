@@ -22,8 +22,8 @@ public class Terminal {
     public static void main(String[] args) {
 	ClassPathXmlApplicationContext context = 
 		new ClassPathXmlApplicationContext("Beans.xml");
-	NewYearPresentImp present = (NewYearPresentImp) context.getBean("present");
-	NewYearPresent newYearPresent = present;
+	NewYearPresentImp newYearPresent = 
+		(NewYearPresentImp) context.getBean("present");
 	//NewYearPresent newYearPresent = Init.getInit().getPresent();
 	int status = 0;
 	double from = 0, to = 0;
