@@ -112,9 +112,9 @@ public class NewYearPresentImp implements NewYearPresent {
     /**
      * Set candies to candy list.
      * Method added for Spring bean
-     * @param candy
+     * @param candies list
      */
-    public void setCandies(Candy candy) {
-	candies.add(candy);
+    public void setCandies(List<Candy> candies) {
+	this.candies.addAll(candies);
     }
 }

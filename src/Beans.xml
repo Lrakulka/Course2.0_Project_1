@@ -6,14 +6,19 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     https://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
     
-	<bean id="candyKater" class="homework.com.CandyKater" />
-	<bean id="candyRomashka" class="homework.com.Romashka" />
-	<bean id="candyBarabas" class="homework.com.ChocolateCandyBarabas" />
+	<bean id="candyKater" class="homework.com.candy.CandyKater" />
+	<bean id="candyRomashka" class="homework.com.candy.CandyRomashka" />
+	<bean id="candyBarabas" class="homework.com.candy.ChocolateCandyBarabas" />
 	
 	<bean id="present" class="homework.com.present.NewYearPresentImp">
-		<property name="candies" ref="candyKater" />
-		<property name="candies" ref="candyRomashka" />
-		<property name="candies" ref="candyBarabas" />
-		<property name="candies" ref="candyBarabas" />
+		<property name="candies">
+			<list>
+				<ref bean="candyKater"></ref>
+				<ref bean="candyRomashka"></ref>
+				<ref bean="candyBarabas"></ref>
+				<ref bean="candyBarabas"></ref>
+				<ref bean="candyKater"></ref>
+			</list>
+		</property>
 	</bean>  
 </beans>
