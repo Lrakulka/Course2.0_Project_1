@@ -1,7 +1,6 @@
 package homework.com.present;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
@@ -48,13 +47,8 @@ public class NewYearPresentImp implements NewYearPresent {
      */
     @Override
     public void sortBySugar() {
-	candies.sort(new Comparator<Candy>() {
-
-	    @Override
-	    public int compare(Candy o1, Candy o2) {
-		return Integer.compare(o1.getWeight(), o2.getWeight());
-	    }
-	});
+	candies.sort((Candy o1, Candy o2) -> 
+		Integer.compare(o1.getWeight(), o2.getWeight()));
     }
 
     /* (non-Javadoc)
@@ -62,12 +56,8 @@ public class NewYearPresentImp implements NewYearPresent {
      */
     @Override
     public void sortByName() {
-	candies.sort(new Comparator<Candy>() {
-
-	    @Override
-	    public int compare(Candy o1, Candy o2) {
+	candies.sort((Candy o1, Candy o2) -> {
 		return o1.getName().compareTo(o2.getName());
-	    }
 	});
     }
 
