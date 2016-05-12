@@ -47,8 +47,8 @@ public class NewYearPresentImp implements NewYearPresent {
      */
     @Override
     public void sortBySugar() {
-	candies.sort((Candy o1, Candy o2) -> 
-		Integer.compare(o1.getWeight(), o2.getWeight()));
+	candies.sort((o1, o2) -> 
+		Double.compare(o1.getSugar(), o2.getSugar()));
     }
 
     /* (non-Javadoc)

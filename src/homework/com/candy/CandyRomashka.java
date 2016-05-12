@@ -10,13 +10,14 @@ public class CandyRomashka extends CandyImp {
     private static final String NAME = "Romashka";
     private static final int WEIGHT = 20;
     private static final double SUGAR = 12;
-    private static final int PRICE = 40;
+    private int price = 40;
     
     /**
      * Sugar = 13 gram Weight = 20 gram Name = Romashka
      */
-    public CandyRomashka() {
+    public CandyRomashka(int price) {
 	super(SUGAR, WEIGHT, NAME);
+	this.price = price;
     }
 
     /* (non-Javadoc)
@@ -24,6 +25,6 @@ public class CandyRomashka extends CandyImp {
      */
     @Override
     int getPrice() {
-	return (int) ((SUGAR / WEIGHT) * PRICE);  // It's better to do constant
+	return (int) ((SUGAR / WEIGHT) * price); 
     }
 }

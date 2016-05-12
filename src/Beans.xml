@@ -6,9 +6,15 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     https://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
     
-	<bean id="candyKater" class="homework.com.candy.CandyKater" />
-	<bean id="candyRomashka" class="homework.com.candy.CandyRomashka" />
-	<bean id="candyBarabas" class="homework.com.candy.ChocolateCandyBarabas" />
+	<bean id="candyKater" class="homework.com.candy.CandyKater">
+		<constructor-arg name="price" value="40"/>
+	</bean>
+	<bean id="candyRomashka" class="homework.com.candy.CandyRomashka">
+		<constructor-arg name="price" value="50"/>
+	</bean>
+	<bean id="candyBarabas" class="homework.com.candy.ChocolateCandyBarabas">
+		<constructor-arg name="price" value="60"/>
+	</bean>
 	
 	<bean id="present" class="homework.com.present.NewYearPresentImp">
 		<property name="candies">

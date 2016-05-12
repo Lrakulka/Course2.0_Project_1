@@ -10,13 +10,14 @@ public class CandyKater extends CandyImp {
     private static final String NAME = "Kater";
     private static final int WEIGHT = 10;
     private static final double SUGAR = 6;
-    private static final int PRICE = 60;
+    private int price;
     
     /**
      * Sugar = 6 gram Weight = 10 gram Name = Kater
      */
-    public CandyKater() {
+    public CandyKater(int price) {
 	super(SUGAR, WEIGHT, NAME);
+	this.price = price;
     }
 
     /* (non-Javadoc)
@@ -24,6 +25,6 @@ public class CandyKater extends CandyImp {
      */
     @Override
     int getPrice() {
-	return PRICE;
+	return price;
     }
 }

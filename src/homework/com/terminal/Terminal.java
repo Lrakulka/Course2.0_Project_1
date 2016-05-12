@@ -3,7 +3,6 @@ package homework.com.terminal;
 import java.util.Scanner;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import homework.com.candy.*;
-import homework.com.present.NewYearPresent;
 import homework.com.present.NewYearPresentImp;
 
 /**
@@ -27,6 +26,7 @@ public class Terminal {
 	//NewYearPresent newYearPresent = Init.getInit().getPresent();
 	int status = 0;
 	double from = 0, to = 0;
+	int price;
 	Scanner in = new Scanner(System.in);
 	System.out.println("To call help print 0");
 	while (status != 20) {
@@ -46,17 +46,23 @@ public class Terminal {
 		break;
 		
 	    case 2:
-		newYearPresent.putCandy(new CandyKater());
+		System.out.println(" Print price of candy");
+		price = in.nextInt();
+		newYearPresent.putCandy(new CandyKater(price));
 		System.out.println("Candy Kater added");
 		break;
 		
 	    case 3:
-		newYearPresent.putCandy(new CandyRomashka());
+		System.out.println(" Print price of candy");
+		price = in.nextInt();
+		newYearPresent.putCandy(new CandyRomashka(price));
 		System.out.println("Candy Romashka added");
 		break;
 	    
 	    case 4:
-		newYearPresent.putCandy(new ChocolateCandyBarabas());
+		System.out.println(" Print price of candy");
+		price = in.nextInt();
+		newYearPresent.putCandy(new ChocolateCandyBarabas(price));
 		System.out.println("Candy Barabas added");
 		break;
 		
